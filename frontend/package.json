@@ -1,7 +1,7 @@
 {
   "name": "counterfire2-frontend",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CounterFire 2 Tauri control panel frontend",
   "license": "MIT",
   "repository": {

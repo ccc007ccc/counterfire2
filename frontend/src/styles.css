@@ -497,7 +497,20 @@ input[type="range"]:focus {
   margin: 0;
   padding: 12px 16px;
   overflow: hidden;
-  background: rgba(10, 13, 22, 0.64);
+  background: rgba(10, 13, 22, 0.72);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  transform: translateZ(0);
+}
+
+.log::before {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 100% 0%, rgba(255, 190, 96, 0.16), transparent 36%),
+    rgba(10, 13, 22, 0.42);
+  opacity: 1;
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
 }
 
 .log-list {

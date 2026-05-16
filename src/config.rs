@@ -20,7 +20,7 @@ pub const MAX_ICON_SCALE: f32 = 2.0;
 pub const MIN_ICON_POSITION: f32 = 0.0;
 pub const MAX_ICON_POSITION: f32 = 1.0;
 pub const DEFAULT_ICON_X: f32 = 0.5;
-pub const DEFAULT_ICON_Y: f32 = 0.5;
+pub const DEFAULT_ICON_Y: f32 = 0.75;
 pub const MIN_VOLUME: f32 = 0.0;
 pub const MAX_VOLUME: f32 = 2.0;
 pub const MIN_KILL_STREAK_RESET_SECONDS: f32 = 1.0;
@@ -280,7 +280,7 @@ pub fn help_text() -> &'static str {
     "CounterFire 2\n\n\
      用法:\n\
      counterfire2                 打开窗口控制面板\n\
-     counterfire2 --cli [--demo] [--port 57534] [--lang cn|en] [--side auto|CT|T] [--width px] [--height px] [--icon-scale 1.0] [--icon-x 0.5] [--icon-y 0.5] [--volume 1.0] [--kill-streak-reset 15] [--no-vsync]\n\n\
+     counterfire2 --cli [--demo] [--port 57534] [--lang cn|en] [--side auto|CT|T] [--width px] [--height px] [--icon-scale 1.0] [--icon-x 0.5] [--icon-y 0.75] [--volume 1.0] [--kill-streak-reset 15] [--no-vsync]\n\n\
      --cli       使用控制台 fallback 模式\n\
      --demo      不等待 CS2 GSI，循环触发示例击杀特效\n\
      --port      CS2 GSI HTTP 监听端口，默认 57534\n\
@@ -290,7 +290,7 @@ pub fn help_text() -> &'static str {
      --height    Game Bar 画布高度覆盖，不传则使用当前屏幕高度\n\
      --icon-scale 击杀图标大小倍率，范围 0.5-2.0，默认 1.0\n\
      --icon-x    击杀图标水平位置，范围 0.0-1.0，默认 0.5\n\
-     --icon-y    击杀图标垂直位置，范围 0.0-1.0，默认 0.5\n\
+     --icon-y    击杀图标垂直位置，范围 0.0-1.0，默认 0.75\n\
      --volume    音效音量倍率，范围 0.0-2.0，默认 1.0\n\
      --kill-streak-reset 连杀重置秒数，范围 1-120，默认 15\n\
      --no-vsync  不调用 DwmFlush，改为约 60 FPS 定时"

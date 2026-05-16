@@ -2,5 +2,35 @@
 name = "counterfire2"
 version = "0.1.0"
 edition = "2024"
+authors = ["ccc007ccc"]
+description = "CS2 GSI driven CrossFire-style kill effects for overlay-engine"
+license = "MIT"
+repository = "https://github.com/ccc007ccc/counterfire2"
+readme = "README.md"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
 
 [dependencies]
+anyhow = "1"
+bytes = "1"
+core-server = { package = "core-server", git = "https://github.com/ccc007ccc/overlay-engine.git", rev = "5dae657816bc7845ad1b39d1cd02a60c9e373efd" }
+cs2-gsi = { git = "https://github.com/ccc007ccc/cs2-gsi.git", rev = "f5735ed709d55850d2c4a4b24fd6e50c9c5b8f8d" }
+image = { version = "0.25", default-features = false, features = ["png"] }
+parking_lot = "0.12"
+rand = "0.8"
+rodio = "0.22.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+windows = { version = "0.59", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Dwm",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Memory",
+    "Win32_UI_HiDpi",
+    "Win32_UI_WindowsAndMessaging",
+] }
